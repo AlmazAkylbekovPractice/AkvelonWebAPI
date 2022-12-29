@@ -1,4 +1,7 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using AkvelonWebAPI.EFCore;
+using Microsoft.EntityFrameworkCore;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
@@ -6,6 +9,12 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Add services to the container.
+builder.Services.AddDbContext<EFDataContext>(
+                o => o.UseNpgsql(builder.Configuration.GetConnectionString("AkvelonConnectionDB"))
+            );
+builder.Services.AddControllers();
 
 var app = builder.Build();
 

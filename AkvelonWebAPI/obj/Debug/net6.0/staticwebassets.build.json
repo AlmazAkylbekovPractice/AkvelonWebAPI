@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "bEQzpQzBLZrQ+NX9nNniKBdx6cCYfEsCVgtslHHTlck=",
+  "Source": "AkvelonWebAPI",
+  "BasePath": "_content/AkvelonWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

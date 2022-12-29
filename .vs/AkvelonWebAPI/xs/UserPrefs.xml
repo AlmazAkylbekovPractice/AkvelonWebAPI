@@ -1,4 +1,37 @@
 ﻿<Properties StartupConfiguration="{609F7B41-DBC3-466E-9E57-5246B936E178}|Default">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.AkvelonWebAPI FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.AkvelonWebAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AkvelonWebAPI/Models/DatabaseHelper.cs">
+    <Files>
+      <File FileName="AkvelonWebAPI/appsettings.Development.json" />
+      <File FileName="AkvelonWebAPI/appsettings.json" />
+      <File FileName="AkvelonWebAPI/EFCore/Project.cs" Line="10" Column="9" />
+      <File FileName="AkvelonWebAPI/EFCore/Task.cs" Line="11" Column="9" />
+      <File FileName="AkvelonWebAPI/EFCore/EFDataContext.cs" Line="10" Column="53" />
+      <File FileName="AkvelonWebAPI/Program.cs" Line="16" Column="15" />
+      <File FileName="AkvelonWebAPI/Models/ProjectModel.cs" Line="13" Column="6" />
+      <File FileName="AkvelonWebAPI/Models/TaskModel.cs" Line="13" Column="1" />
+      <File FileName="AkvelonWebAPI/Models/DatabaseHelper.cs" Line="28" Column="34" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AkvelonWebAPI" expanded="True">
+            <Node name="AkvelonWebAPI" expanded="True">
+              <Node name="EFCore" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="DatabaseHelper.cs" selected="True" />
+              </Node>
+              <Node name="appsettings.json" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>
