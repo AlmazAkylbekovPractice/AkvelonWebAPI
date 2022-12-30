@@ -1,26 +1,28 @@
 ﻿<Properties StartupConfiguration="{609F7B41-DBC3-466E-9E57-5246B936E178}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.AkvelonWebAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AkvelonWebAPI/Converters/ProjectConverter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AkvelonWebAPI/Converters/TaskConverter.cs">
     <Files>
-      <File FileName="AkvelonWebAPI/appsettings.Development.json" />
-      <File FileName="AkvelonWebAPI/appsettings.json" />
-      <File FileName="AkvelonWebAPI/EFCore/Project.cs" Line="16" Column="6" />
-      <File FileName="AkvelonWebAPI/EFCore/Task.cs" Line="1" Column="1" />
-      <File FileName="AkvelonWebAPI/EFCore/EFDataContext.cs" Line="8" Column="94" />
-      <File FileName="AkvelonWebAPI/Program.cs" Line="12" Column="1" />
-      <File FileName="AkvelonWebAPI/Models/ProjectModel.cs" Line="5" Column="31" />
-      <File FileName="AkvelonWebAPI/Models/TaskModel.cs" Line="7" Column="3" />
-      <File FileName="AkvelonWebAPI/Models/DatabaseHelper.cs" Line="27" Column="41" />
-      <File FileName="AkvelonWebAPI/Controllers/AkvelonAPIController.cs" Line="15" Column="6" />
+      <File FileName="AkvelonWebAPI/appsettings.Development.json" Line="10" Column="1" />
+      <File FileName="AkvelonWebAPI/appsettings.json" Line="1" Column="1" />
+      <File FileName="AkvelonWebAPI/Program.cs" Line="6" Column="34" />
       <File FileName="AkvelonWebAPI/Controllers/WeatherForecastController.cs" Line="1" Column="1" />
-      <File FileName="AkvelonWebAPI/Converters/ProjectConverter.cs" Line="10" Column="1" />
-      <File FileName="AkvelonWebAPI/Converters/TaskConverter.cs" Line="8" Column="4" />
+      <File FileName="AkvelonWebAPI/Converters/ProjectConverter.cs" Line="2" Column="1" />
+      <File FileName="AkvelonWebAPI/Utils/ValidatorUtils.cs" Line="6" Column="29" />
+      <File FileName="AkvelonWebAPI/Models/Dto/ProjectDto.cs" Line="1" Column="14" />
+      <File FileName="AkvelonWebAPI/Models/Project.cs" Line="13" Column="46" />
+      <File FileName="AkvelonWebAPI/Mappers/ProjectMapper.cs" Line="9" Column="63" />
+      <File FileName="AkvelonWebAPI/Controllers/ProjectController.cs" Line="2" Column="34" />
+      <File FileName="AkvelonWebAPI/Database/ProjectRepository.cs" Line="12" Column="3" />
+      <File FileName="AkvelonWebAPI/Database/TaskRepository.cs" Line="24" Column="33" />
+      <File FileName="AkvelonWebAPI/Converters/TaskConverter.cs" Line="21" Column="3" NotebookId="1" />
+      <File FileName="AkvelonWebAPI/Models/Dto/TaskDto.cs" Line="13" Column="45" NotebookId="1" />
+      <File FileName="AkvelonWebAPI/Models/Task.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="AkvelonWebAPI/Database/DatabaseContext.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -29,20 +31,20 @@
             <Node name="AkvelonWebAPI" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Converters" expanded="True">
-                <Node name="ProjectConverter.cs" selected="True" />
+                <Node name="TaskConverter.cs" selected="True" />
               </Node>
               <Node name="Database" expanded="True" />
+              <Node name="Mappers" expanded="True" />
               <Node name="Models" expanded="True">
                 <Node name="Dto" expanded="True" />
               </Node>
+              <Node name="Utils" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
 </Properties>

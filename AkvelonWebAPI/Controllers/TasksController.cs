@@ -2,31 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AkvelonWebAPI.Database;
 using AkvelonWebAPI.EFCore;
 using AkvelonWebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
+// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace AkvelonWebAPI.Controllers
 {
-
     [Route("api/[controller]")]
-    public class ProjectController : Controller
+    public class TasksController : Controller
     {
+        private readonly TaskRepository _taskRepository;
 
-        private readonly ProjectRepository _projectRepository;
-
-        public ProjectController(DatabaseContext eFDataContext)
+        public TasksController(DatabaseContext eFDataContext)
         {
-            _projectRepository = new ProjectRepository(eFDataContext);
+            _taskRepository = new TaskRepository(eFDataContext);
         }
 
-        [HttpGet("/projects")]
-        public ActionResult<List<ProjectDto>> GetProjects()
+        [HttpGet("/tasks")]
+        public ActionResult<List<TaskDto>> GetTasks()
         {
             try
             {
-                return _projectRepository.GetProjects();
+                return _taskRepository.GetTasks();
             }
             catch (Exception ex)
             {
@@ -36,12 +36,12 @@ namespace AkvelonWebAPI.Controllers
             }
         }
 
-        [HttpGet("project/{id}")]
-        public ActionResult<ProjectDto> GetProjectById(int id)
+        [HttpGet("task/{id}")]
+        public ActionResult<TaskDto> GetTaskById(int id)
         {
             try
             {
-                var project = _projectRepository.GetProjectById(id);
+                var project = _taskRepository.GetTaskById(id);
                 return Ok(project);
             }
             catch (ArgumentException ex)
@@ -55,12 +55,12 @@ namespace AkvelonWebAPI.Controllers
             }
         }
 
-        [HttpPost("/project")]
-        public ActionResult CreateProject(ProjectDto projectDto)
+        [HttpPost("/projects/{id}/task")]
+        public ActionResult CreateTask(int projectId, TaskDto taskDto)
         {
             try
             {
-                _projectRepository.CreateProject(projectDto);
+                _taskRepository.CreateTask(taskDto,projectId);
                 return Ok();
             }
             catch (ArgumentException ex)
@@ -74,12 +74,13 @@ namespace AkvelonWebAPI.Controllers
             }
         }
 
-        [HttpPut("project/{id}")]
-        public ActionResult UpdateProject(int id, ProjectDto projectDto)
+
+        [HttpPut("task/{id}")]
+        public ActionResult UpdateTask(int id, TaskDto taskDto)
         {
             try
             {
-                _projectRepository.UpdateProject(id, projectDto);
+                _taskRepository.UpdateTask(id, taskDto);
                 return Ok();
             }
             catch (ArgumentException ex)
@@ -93,12 +94,12 @@ namespace AkvelonWebAPI.Controllers
             }
         }
 
-        [HttpDelete("project/{id}")]
-        public ActionResult DeleteProject(int id)
+        [HttpDelete("task/{id}")]
+        public ActionResult DeleteTask(int id)
         {
             try
             {
-                _projectRepository.DeleteProject(id);
+                _taskRepository.DeleteTask(id);
                 return Ok();
             }
             catch (ArgumentException ex)

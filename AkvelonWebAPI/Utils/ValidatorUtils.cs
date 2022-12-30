@@ -1,4 +1,5 @@
 ﻿using System;
+using AkvelonWebAPI.EFCore;
 using AkvelonWebAPI.Models;
 
 namespace AkvelonWebAPI.Utils
@@ -28,6 +29,19 @@ namespace AkvelonWebAPI.Utils
             //Add more validation (optional)
             //Can be changed to annotations
             //Left for simplicity
+        }
+
+        public static void ValidateTaskDto(TaskDto task)
+        {
+            if (task == null)
+            {
+                throw new ArgumentException("Task is null");
+            }
+
+            if (string.IsNullOrEmpty(task.name))
+            {
+                throw new ArgumentException("Invalid project name");
+            }
         }
     }
 }
