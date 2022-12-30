@@ -92,6 +92,26 @@ namespace AkvelonWebAPI.Controllers
             }
         }
 
+        [HttpPut("projects/{id}")]
+        public ActionResult UpdateProject(int id, ProjectModel projectModel)
+        {
+            try
+            {
+                // Update the project using the DbHelper class
+                _dbHelper.UpdateProject(id, projectModel);
+
+                // Return a success response
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                Console.WriteLine(ex.ToString());
+                // Return a server error response
+                return StatusCode(500);
+            }
+        }
+
         [HttpDelete("projects/{id}")]
         public ActionResult DeleteProject(int id)
         {

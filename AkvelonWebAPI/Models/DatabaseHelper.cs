@@ -96,6 +96,44 @@ namespace AkvelonWebAPI.Models
             }
         }
 
+        public void UpdateProject(int id, ProjectModel projectModel)
+        {
+            // Validate the input
+            if (id <= 0 || projectModel == null || string.IsNullOrEmpty(projectModel.name))
+            {
+                // Throw an exception if the input is invalid
+                throw new ArgumentException("Invalid input");
+            }
+
+            try
+            {
+                // Check if the project with the specified ID exists
+                var project = _context.Projects.FirstOrDefault(p => p.id == id);
+                if (project == null)
+                {
+                    // Throw an exception if the project does not exist
+                    throw new Exception("Project not found");
+                }
+
+                // Update the fields of the project
+                project.name = projectModel.name;
+                project.startDate = projectModel.startDate;
+                project.endDate = projectModel.endDate;
+                project.status = projectModel.status;
+                project.priority = projectModel.priority;
+
+                // Save the changes to the database
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                Console.WriteLine(ex.ToString());
+                // Throw an exception if something goes wrong
+                throw ex;
+            }
+        }
+
         public void DeleteProject(int id)
         {
             // Validate the input
