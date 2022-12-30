@@ -11,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Add services to the container.
-builder.Services.AddDbContext<EFDataContext>(
+builder.Services.AddDbContext<DatabaseContext>(
                 o => o.UseNpgsql(builder.Configuration.GetConnectionString("AkvelonConnectionDB"))
             );
 builder.Services.AddControllers();

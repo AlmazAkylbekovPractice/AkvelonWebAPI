@@ -1,16 +1,16 @@
 ﻿using System;
-using AkvelonWebAPI.EFCore;
+using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace AkvelonWebAPI.Models
 {
-	public class TaskModel
+	public class ProjectDto
 	{
         public int id { get; set; }
         public string name { get; set; } = string.Empty;
+        public DateTime startDate { get; set; }
+        public DateTime endDate { get; set; }
         public string status { get; set; } = string.Empty;
-        public string description { get; set; } = string.Empty;
         public int priority { get; set; }
-        public Project project { get; set; }
     }
 }
-

@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace AkvelonWebAPI.Migrations
 {
-    [DbContext(typeof(EFDataContext))]
+    [DbContext(typeof(DatabaseContext))]
     partial class EFDataContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

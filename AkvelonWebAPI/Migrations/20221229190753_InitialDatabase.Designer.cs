@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace AkvelonWebAPI.Migrations
 {
-    [DbContext(typeof(EFDataContext))]
+    [DbContext(typeof(DatabaseContext))]
     [Migration("20221229190753_InitialDatabase")]
     partial class InitialDatabase
     {

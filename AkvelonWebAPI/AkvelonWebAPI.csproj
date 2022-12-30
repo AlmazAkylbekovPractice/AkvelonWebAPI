@@ -18,11 +18,15 @@
   <ItemGroup>
     <None Remove="Npgsql.EntityFrameworkCore.PostgreSQL" />
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
-    <None Remove="EFCore\" />
     <None Remove="Models\" />
+    <None Remove="Converters\" />
+    <None Remove="Utils\" />
+    <None Remove="Mappers\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="EFCore\" />
     <Folder Include="Models\" />
+    <Folder Include="Converters\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Mappers\" />
   </ItemGroup>
 </Project>
