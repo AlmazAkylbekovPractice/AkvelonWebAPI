@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using AkvelonWebAPI.EFCore;
 using AkvelonWebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
-
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace AkvelonWebAPI.Controllers
@@ -21,18 +20,101 @@ namespace AkvelonWebAPI.Controllers
             _dbHelper = new DatabaseHelper(eFDataContext);
         }
 
-
         // GET: api/<AkvelonAPIController>
         [HttpGet("projects")]
         public ActionResult<List<ProjectModel>> GetProjects()
         {
-            return _dbHelper.GetProjects();
+            try
+            {
+                return _dbHelper.GetProjects();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                Console.WriteLine(ex.ToString());
+                // Return a server error response
+                return StatusCode(500);
+            }
+        }
+
+        [HttpGet("projects/{id}")]
+        public ActionResult<ProjectModel> GetProjectById(int id)
+        {
+            // Validate the input
+            if (id <= 0)
+            {
+                // Return a bad request response if the input is invalid
+                return BadRequest();
+            }
+
+            try
+            {
+                var project = _dbHelper.GetProjectById(id);
+                // Return the project if it was found
+                if (project != null)
+                {
+                    return Ok(project);
+                }
+                // Return a not found response if the project was not found
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                Console.WriteLine(ex.ToString());
+                // Return a server error response
+                return StatusCode(500);
+            }
         }
 
         [HttpPost("projects")]
-        public void CreateProject(ProjectModel projectModel)
+        public ActionResult CreateProject(ProjectModel projectModel)
         {
-            _dbHelper.CreateProject(projectModel);
+            // Validate the input
+            if (projectModel == null || string.IsNullOrEmpty(projectModel.name))
+            {
+                // Return a bad request response if the input is invalid
+                return BadRequest();
+            }
+
+            try
+            {
+                _dbHelper.CreateProject(projectModel);
+                // Return a success response
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                Console.WriteLine(ex.ToString());
+                // Return a server error response
+                return StatusCode(500);
+            }
+        }
+
+        [HttpDelete("projects/{id}")]
+        public ActionResult DeleteProject(int id)
+        {
+            // Validate the input
+            if (id <= 0)
+            {
+                // Return a bad request response if the input is invalid
+                return BadRequest();
+            }
+
+            try
+            {
+                _dbHelper.DeleteProject(id);
+                // Return a success response
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                // Log the exception
+                Console.WriteLine(ex.ToString());
+                // Return a server error response
+                return StatusCode(500);
+            }
         }
     }
 }

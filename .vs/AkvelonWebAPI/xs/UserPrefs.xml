@@ -3,35 +3,36 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.AkvelonWebAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AkvelonWebAPI/Models/DatabaseHelper.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AkvelonWebAPI/Program.cs">
     <Files>
       <File FileName="AkvelonWebAPI/appsettings.Development.json" />
       <File FileName="AkvelonWebAPI/appsettings.json" />
-      <File FileName="AkvelonWebAPI/EFCore/Project.cs" Line="10" Column="9" />
-      <File FileName="AkvelonWebAPI/EFCore/Task.cs" Line="11" Column="9" />
-      <File FileName="AkvelonWebAPI/EFCore/EFDataContext.cs" Line="10" Column="53" />
-      <File FileName="AkvelonWebAPI/Program.cs" Line="16" Column="15" />
-      <File FileName="AkvelonWebAPI/Models/ProjectModel.cs" Line="13" Column="6" />
-      <File FileName="AkvelonWebAPI/Models/TaskModel.cs" Line="13" Column="1" />
-      <File FileName="AkvelonWebAPI/Models/DatabaseHelper.cs" Line="28" Column="34" />
+      <File FileName="AkvelonWebAPI/EFCore/Project.cs" />
+      <File FileName="AkvelonWebAPI/EFCore/Task.cs" />
+      <File FileName="AkvelonWebAPI/EFCore/EFDataContext.cs" />
+      <File FileName="AkvelonWebAPI/Program.cs" Line="28" Column="27" />
+      <File FileName="AkvelonWebAPI/Models/ProjectModel.cs" Line="3" Column="31" />
+      <File FileName="AkvelonWebAPI/Models/TaskModel.cs" Line="1" Column="1" />
+      <File FileName="AkvelonWebAPI/Models/DatabaseHelper.cs" Line="80" Column="1" />
+      <File FileName="AkvelonWebAPI/Controllers/AkvelonAPIController.cs" Line="17" Column="47" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AkvelonWebAPI" expanded="True">
             <Node name="AkvelonWebAPI" expanded="True">
+              <Node name="Controllers" expanded="True" />
               <Node name="EFCore" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="DatabaseHelper.cs" selected="True" />
-              </Node>
+              <Node name="Models" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.AkvelonWebAPI PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
