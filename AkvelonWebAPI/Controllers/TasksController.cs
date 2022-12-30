@@ -21,6 +21,7 @@ namespace AkvelonWebAPI.Controllers
             _taskRepository = new TaskRepository(eFDataContext);
         }
 
+
         [HttpGet("/tasks")]
         public ActionResult<List<TaskDto>> GetTasks()
         {
@@ -56,11 +57,11 @@ namespace AkvelonWebAPI.Controllers
         }
 
         [HttpPost("/projects/{id}/task")]
-        public ActionResult CreateTask(int projectId, TaskDto taskDto)
+        public ActionResult CreateTask(TaskDto taskDto)
         {
             try
             {
-                _taskRepository.CreateTask(taskDto,projectId);
+                _taskRepository.CreateTask(taskDto);
                 return Ok();
             }
             catch (ArgumentException ex)

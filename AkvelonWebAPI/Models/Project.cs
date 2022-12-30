@@ -11,8 +11,15 @@ namespace AkvelonWebAPI.EFCore
         public string name { get; set; } = string.Empty;
         public DateTime startDate { get; set; }
         public DateTime endDate { get; set; }
-        public string status { get; set; } = string.Empty;
+        public ProjectStatus status { get; set; }
         public int priority { get; set; }
+
+        public enum ProjectStatus
+        {
+            NotStarted,
+            Active,
+            Completed
+        }
     }
 
 }

@@ -20,6 +20,7 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">/Users/almaz/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0</PkgMicrosoft_Extensions_ApiDescription_Server>
+    <PkgMicrosoft_VisualStudio_UnitTesting Condition=" '$(PkgMicrosoft_VisualStudio_UnitTesting)' == '' ">/Users/almaz/.nuget/packages/microsoft.visualstudio.unittesting/11.0.50727.1</PkgMicrosoft_VisualStudio_UnitTesting>
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">/Users/almaz/.nuget/packages/microsoft.entityframeworkcore.tools/7.0.1</PkgMicrosoft_EntityFrameworkCore_Tools>
   </PropertyGroup>
 </Project>

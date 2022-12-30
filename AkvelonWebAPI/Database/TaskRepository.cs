@@ -53,9 +53,8 @@ namespace AkvelonWebAPI.Database
             }
         }
 
-        public void CreateTask(TaskDto taskDto, int porjectId)
+        public void CreateTask(TaskDto taskDto)
         {
-            ValidatorUtils.ValidateId(porjectId);
             ValidatorUtils.ValidateTaskDto(taskDto);
 
             try

@@ -328,6 +328,19 @@
           }
         }
       },
+      "Microsoft.VisualStudio.UnitTesting/11.0.50727.1": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net45/Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Mono.TextTemplating/2.2.1": {
         "type": "package",
         "dependencies": {
@@ -995,6 +1008,24 @@
         "microsoft.openapi.nuspec"
       ]
     },
+    "Microsoft.VisualStudio.UnitTesting/11.0.50727.1": {
+      "sha512": "DoqQ6Zl7GcytRa1isWv20MyV1znFRDje6k/y3edbew3Qx/Z1r5Cf6rBktD7lGxN97d2VVC5RzdFHw+dci9lsMw==",
+      "type": "package",
+      "path": "microsoft.visualstudio.unittesting/11.0.50727.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "THIRD-PARTY-LICENSE.txt",
+        "lib/net45/Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll",
+        "lib/net45/Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml",
+        "microsoft.visualstudio.unittesting.11.0.50727.1.nupkg.sha512",
+        "microsoft.visualstudio.unittesting.nuspec",
+        "tools/net45/MSTest.exe",
+        "tools/net45/MSTest.exe.config"
+      ]
+    },
     "Mono.TextTemplating/2.2.1": {
       "sha512": "KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "type": "package",
@@ -1283,6 +1314,7 @@
   "projectFileDependencyGroups": {
     "net6.0": [
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.1",
+      "Microsoft.VisualStudio.UnitTesting >= 11.0.50727.1",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 7.0.1",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -1330,6 +1362,10 @@
             "target": "Package",
             "version": "[7.0.1, )"
           },
+          "Microsoft.VisualStudio.UnitTesting": {
+            "target": "Package",
+            "version": "[11.0.50727.1, )"
+          },
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[7.0.1, )"
@@ -1361,5 +1397,17 @@
         "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.VisualStudio.UnitTesting 11.0.50727.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.VisualStudio.UnitTesting",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

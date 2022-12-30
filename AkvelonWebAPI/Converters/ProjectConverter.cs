@@ -14,7 +14,7 @@ namespace AkvelonWebAPI.Converters
                 name = source.name,
                 startDate = source.startDate,
                 endDate = source.endDate,
-                status = source.status,
+                status = (ProjectDto.ProjectStatus)source.status,
                 priority = source.priority,
             };
         }
@@ -27,7 +27,7 @@ namespace AkvelonWebAPI.Converters
                 name = source.name,
                 startDate = source.startDate,
                 endDate = source.endDate,
-                status = source.status,
+                status = (Project.ProjectStatus)source.status,
                 priority = source.priority,
             };
         }

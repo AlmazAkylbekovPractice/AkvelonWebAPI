@@ -10,9 +10,16 @@ namespace AkvelonWebAPI.EFCore
         [Key, Required]
         public int id { get; set; }
         public string name { get; set; } = string.Empty;
-        public string status { get; set; } = string.Empty;
+        public TaskStatus status { get; set; }
         public string description { get; set; } = string.Empty;
         public int priority { get; set; }
-        public Project project { get; set; }
+        public int project_id { get; set; }
+
+        public enum TaskStatus
+        {
+            ToDo,
+            InProgress,
+            Done
+        }
     }
 }

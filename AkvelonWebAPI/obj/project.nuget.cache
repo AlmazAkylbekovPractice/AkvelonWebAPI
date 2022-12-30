@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8RmHJ6XmlnZBxS8ZV8glNjz1xOeaMh3gRD1Vsq0RwbNeZfwI+g74C+3CyaINk8RVGXydHg9uqoqBmN0mZUtIGA==",
+  "dgSpecHash": "msrh9sx/EzwhnGqmtxbaef2ag9N0lPUHA7JNeWOXQYbEOFGxVkqIjKOeJWHCB4MMIg7FcXUQUdfoplOrORvFcg==",
   "success": true,
   "projectFilePath": "/Users/almaz/Desktop/Akvelon/AkvelonWebAPI/AkvelonWebAPI/AkvelonWebAPI.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "/Users/almaz/.nuget/packages/microsoft.extensions.options/7.0.0/microsoft.extensions.options.7.0.0.nupkg.sha512",
     "/Users/almaz/.nuget/packages/microsoft.extensions.primitives/7.0.0/microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "/Users/almaz/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/almaz/.nuget/packages/microsoft.visualstudio.unittesting/11.0.50727.1/microsoft.visualstudio.unittesting.11.0.50727.1.nupkg.sha512",
     "/Users/almaz/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/Users/almaz/.nuget/packages/npgsql/7.0.1/npgsql.7.0.1.nupkg.sha512",
     "/Users/almaz/.nuget/packages/npgsql.entityframeworkcore.postgresql/7.0.1/npgsql.entityframeworkcore.postgresql.7.0.1.nupkg.sha512",
@@ -35,5 +36,16 @@
     "/Users/almaz/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/Users/almaz/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.VisualStudio.UnitTesting 11.0.50727.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.VisualStudio.UnitTesting",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

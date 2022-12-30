@@ -9,10 +9,10 @@ namespace AkvelonWebAPI.Mappers
 		public static EFCore.Task map(EFCore.Task target, TaskDto source)
 		{
 			target.name = source.name;
-			target.status = source.status;
+			target.status = (EFCore.Task.TaskStatus)source.status;
 			target.description = source.description;
 			target.priority = source.priority;
-			target.project = source.project;
+			target.project_id = source.projectId;
 			return target;
 		}
 	}

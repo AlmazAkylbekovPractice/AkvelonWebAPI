@@ -11,7 +11,7 @@ namespace AkvelonWebAPI.Mappers
             target.name = source.name;
             target.startDate = source.startDate;
             target.endDate = source.endDate;
-            target.status = source.status;
+            target.status = (Project.ProjectStatus)source.status;
             target.priority = source.priority;
             return target;
         }

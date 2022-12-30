@@ -12,10 +12,10 @@ namespace AkvelonWebAPI.Converters
 			{
 				id = source.id,
 				name = source.name,
-				status = source.status,
+				status = (TaskDto.TaskStatus)source.status,
 				description = source.description,
 				priority = source.priority,
-				project = source.project,
+				projectId = source.project_id,
 			};
 		}
 
@@ -25,10 +25,10 @@ namespace AkvelonWebAPI.Converters
 			{
 				id = source.id,
 				name = source.name,
-				status = source.status,
+				status = (EFCore.Task.TaskStatus)source.status,
 				description = source.description,
 				priority = source.priority,
-				project = source.project,
+				project_id = source.projectId,
 			};
 		}
     }
