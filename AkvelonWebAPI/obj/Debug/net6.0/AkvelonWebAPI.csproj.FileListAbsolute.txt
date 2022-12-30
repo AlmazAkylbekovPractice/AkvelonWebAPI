@@ -52,3 +52,4 @@
 /Users/almaz/Desktop/Akvelon/AkvelonWebAPI/AkvelonWebAPI/obj/Debug/net6.0/AkvelonWebAPI.pdb
 /Users/almaz/Desktop/Akvelon/AkvelonWebAPI/AkvelonWebAPI/obj/Debug/net6.0/AkvelonWebAPI.genruntimeconfig.cache
 /Users/almaz/Desktop/Akvelon/AkvelonWebAPI/AkvelonWebAPI/obj/Debug/net6.0/ref/AkvelonWebAPI.dll
+/Users/almaz/Desktop/Akvelon/AkvelonWebAPI/AkvelonWebAPI/bin/Debug/net6.0/Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
